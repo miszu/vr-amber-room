@@ -1,0 +1,83 @@
+<html>
+<head>
+    <title>The Amber Room</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+    </script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <a-mixin id="checkpoint" animation="property: opacity; to: 0.05; from:0.7; dur: 4000; loop: true" geometry="primitive: circle; radius: 0.5" rotation="-90 0 0" material="color: black" />
+            <a-mixin id="black" material="color: black" />
+            <a-mixin id="yellow" material="color: yellow" />
+            <a-mixin id="mirror" animation="id:mirrorAnimation; property:opacity; delay:10000; dur:2000; fill:forwards; to:0; from:1; repeat:0; direction:alternate" animation__outofview="property: position.y; to: 10; dur: 1; delay: 12000; " rotation="0 -90 0" geometry="width:1.15; height:4.025; depth: 0.1"/>
+
+            <img id="P1" src="images/P1.jpg" preload="auto">
+            <img id="A1" src="images/A1.jpg" preload="auto">
+            <img id="B1" src="images/B1.jpg" preload="auto">
+            <img id="C1" src="images/C1.jpg" preload="auto">
+            <img id="S1" src="images/S1.jpg" preload="auto">
+
+            <img id="P2" src="images/P2.jpg" preload="auto">
+            <img id="A2" src="images/A2.jpg" preload="auto">
+            <img id="B2" src="images/B2.jpg" preload="auto">
+            <img id="C2" src="images/C2.jpg" preload="auto">
+            <img id="S2" src="images/S2.jpg" preload="auto">
+
+            <img id="D1" src="images/D1.jpg" preload="auto">
+            <img id="D2" src="images/D2.jpg" preload="auto">
+            <img id="D3" src="images/D3.jpg" preload="auto">
+            <img id="D4" src="images/D4.jpg" preload="auto">
+            <img id="D5" src="images/D5.jpg" preload="auto">
+            <img id="D6" src="images/D6.jpg" preload="auto">
+            <img id="D7" src="images/D7.jpg" preload="auto">
+
+            <img id="mirrorleft" src="images/mirrorleft.jpg" preload="auto">
+            <img id="mirrorright" src="images/mirrorright.jpg" preload="auto">
+        </a-assets>
+        <a-entity camera look-controls universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate" position="10 1.5 -1.66" rotation="-4.583662361046595 -51.79538467982641 3.9884514693775443e-16">
+            <a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.02" material="color: white; shader: flat">
+            </a-entity>
+        </a-entity>
+
+        <a-circle mixin="checkpoint black" checkpoint="offset:0 1.6 0" position="-1.260710291950411 0.05 -7.387550555731698"></a-circle>
+        <a-circle mixin="checkpoint yellow" checkpoint="offset:0 1.6 0" position="10.220577554510491 0.05 -3.6941158171897115"></a-circle>
+        <a-circle mixin="checkpoint yellow" checkpoint="offset:0 1.6 0" position="13.208603649904157 0.05 0.2729441713437146"></a-circle>
+        <a-circle mixin="checkpoint yellow" checkpoint="offset:0 1.6 0" position="6.457057897780855 0.05 -0.8173004972375852"></a-circle>
+        <a-circle mixin="checkpoint black" checkpoint="offset:0 1.6 0" position="3.920007760601978 0.05 -6.773486115331007"></a-circle>
+        <a-circle mixin="checkpoint black" checkpoint="offset:0 1.6 0" position="0.2416657963122273 0.05 0.316"></a-circle>
+        <a-circle mixin="checkpoint black" checkpoint="offset:0 1.6 0" position="0.1433815072062291 0.05 -3.133948641836252"></a-circle>
+        <a-circle mixin="checkpoint black" checkpoint="offset:0 1.6 0" position="3.0021537446314044 0.05 -5.54994324880286"></a-circle>
+
+        <a-plane id="P1" position="0 0 -3.5" rotation="-90 0 0" material="" geometry="width:10.5;height:11.5" src="#P1"></a-plane>
+        <a-plane id="A1" height="8" rotation="0 180 0" material="" geometry="width:10.5" position="0 4 2.25" src="#A1"></a-plane>
+        <a-plane id="B1" height="8" position="-5.25 4 -3.5" rotation="0 90 0" material="" geometry="width:11.5" src="#B1"></a-plane>
+        <a-plane id="C1" height="8" position="0 4 -9.25" material="" geometry="width:10.5" src="#C1"></a-plane>
+        <a-plane id="S1" position="0 8 -3.5" rotation="90 0 0" material="" geometry="height:11.5;width:10.5" src="#S1"></a-plane>
+
+        <a-box id="D7" height="8" depth="0.1" position="5.165 4 -7.715" rotation="0 -90 0" material="" geometry="width:3.07" src="#D7"></a-box>
+
+        <a-box id="D5" height="3.5" depth="0.1" position="5.165 6.246 -5.605" rotation="0 -90 0" material="" geometry="width:1.15" src="#D5"></a-box>
+        <a-box mixin="mirror" id="mirror-left" position="5.165 2.478 -5.605" src="#mirrorleft"></a-box>
+
+        <a-box id="D6" height="0.475" depth="0.1" position="5.165 0.237 -5.605" rotation="0 -90 0" material="" geometry="width:1.15" src="#D6"></a-box>
+
+        <a-box id="D4" height="8" depth="0.1" position="5.165 4 -3.51" rotation="0 -90 0" material="" geometry="width:3.035" src="#D4"></a-box>
+
+        <a-box id="D2" height="3.5" depth="0.1" position="5.165 6.246 -1.41" rotation="0 -90 0" material="" geometry="width:1.1675" src="#D2"></a-box>
+        <a-box mixin="mirror" id="mirror-right" position="5.165 2.478 -1.41" src="#mirrorright"></a-box>
+        <a-box id="D3" height="0.475" depth="0.1" position="5.165 0.237 -1.41" rotation="0 -90 0" material="" geometry="width:1.1675" src="#D3"></a-box>
+
+        <a-box id="D1" height="8" depth="0.1" position="5.165 4 0.71" rotation="0 -90 0" material="" geometry="width:3.0775" src="#D1"></a-box>
+
+        <a-plane id="P2" position="10.41 0 -3.5" rotation="-90 0 0" material="" geometry="width:10.5;height:11.5" src="#P2"></a-plane>
+        <a-plane id="A2" height="8" rotation="0 180 0" material="" geometry="width:10.5" position="10.41 4 2.25" src="#A2"></a-plane>
+        <a-plane id="B2" height="8" position="15.5 4 -3.5" rotation="0 -90 0" material="" geometry="width:12" src="#B2"></a-plane>
+        <a-plane id="C2" height="8" position="10.41 4 -9.25" material="" geometry="width:10.5" src="#C2"></a-plane>
+        <a-plane id="S2" position="10.41 8 -3.5" rotation="90 0 0" material="" geometry="height:11.5;width:10.5" src="#S2"></a-plane>
+        <a-light type="ambient" intensity="0.84" color="white" position="0 5 0"></a-light>
+    </a-scene>
+</body>
+</html>
