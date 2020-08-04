@@ -24,4 +24,4 @@ Code in this repository is MIT
 
 Make sure to check A-Frame licensing
 
-Photos of The Amber Room are in public domain
+Photos of The Amber Room used in this project are in public domain (they are modified by Jagna Nawrocka to look good as textures)
