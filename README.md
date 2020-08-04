@@ -1,6 +1,6 @@
 # The Amber Room VR
 
-VR project created for the [Survival exhibition in Wrocław](http://www.survival.art.pl/en/) by [Jagna Nawrocka](https://jagnanawrocka.wixsite.com/portfolio) and Michał Żołnieruk
+VR project created for the [Survival exhibition in Wrocław](http://www.survival.art.pl/en/) by [Jagna Nawrocka](https://jagnanawrocka.wixsite.com/portfolio) and me
 
 Article describing the work: https://medium.com/@miszu/5f8a9f965de5?source=friends_link&sk=16bedd0aa5af29f509aef4d33e1a99d3
 
